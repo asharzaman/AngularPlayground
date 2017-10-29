@@ -10,7 +10,7 @@ export class WeatherService {
 
     getWeather(): Observable<IWeather[]> {
         return this._http
-            .get('http://www.zaman.es:786/api/office')
+            .get('http://localhost:9001/api/office')
             .map((response: Response) => <IWeather[]>response.json());
     }
 }
